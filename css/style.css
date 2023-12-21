@@ -10,6 +10,11 @@
   border-color: #343a40; 
 }
 
+.table td, .table th {
+  width: auto; 
+  vertical-align: middle;
+}
+
 .btn-light {
   color: #343a40;
   background-color: #d7d2d2;
