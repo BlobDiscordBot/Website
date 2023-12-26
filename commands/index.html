@@ -13,6 +13,14 @@
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <link rel="shortcut icon" href="/img/" type="image/x-icon">
 
+    <meta property="og:title" content="Blob">
+    <link rel="shortcut icon" type="image/png" href="https://cdn.discordapp.com/attachments/809031839032672327/1187389389731541052/blob_loves_diamonds.png">
+    <meta property="og:locale" content="en_US">
+    <meta name="description" content="A cool multi purpose Discord bot which has commands for Configuration, Fun, Moderation, Utility, Image, Leveling and Economy.">
+    <meta property="og:description" content="A cool multi purpose Discord bot which has commands for Configuration, Fun, Moderation, Utility, Image, Leveling and Economy.">
+    <meta property="og:image:type" content="image/webp">
+    <meta property="og:image" content="https://cdn.discordapp.com/attachments/809031839032672327/1187389389731541052/blob_loves_diamonds.png?size=1024">
+
     <title>Commands</title>
 </head>
 
@@ -43,7 +51,6 @@
             <div class="row justify-content-center">
                 <div class="col-md-8 text-center">
                     <h1 class="mb-4">Commands</h1>
-                    <p>All the commands are grouped into different modules</p>
                     <div class="d-flex flex-wrap justify-content-center">
                         <a href="#Moderation" class="btn btn-info m-2">Moderation Commands</a>
                         <a href="#Admin" class="btn btn-info m-2">Admin Commands</a>
@@ -63,16 +70,14 @@
     <section class="bg-dark text-light text-center py-5">
         <div class="container">
             <h2 class="mb-4">Search Commands</h2>
-            <input type="text" id="commandSearch" class="form-control mb-3" placeholder="Type to search commands"
+            <input type="text" id="commandSearch" class="form-control mb-3" placeholder="Enter command name"
                 oninput="searchCommands()">
             <div id="searchResults"></div>
         </div>
     </section>
 
     <!-- JavaScript to handle command search -->
-    <script src="./js/searchCommand.js"></script>
-
-    <!-- Command Tables -->
+    <script src="/js/searchCommand.js"></script>
 
     <!-- Command Tables -->
 
@@ -546,12 +551,12 @@
                     </tr>
                     <tr>
                         <td>/privacy-policy</td>
-                        <td>Shows's our privacy-policy you can also find our privacy-policy in our website too</td>
+                        <td>Shows our privacy-policy</td>
                         <td>/privacy-policy</td>
                     </tr>
                     <tr>
                         <td>/terms-of-service</td>
-                        <td>Shows our terms-of-service find our terms-of-service in our website too</td>
+                        <td>Shows our terms-of-service</td>
                         <td>/terms-of-service</td>
                     </tr>
                     <tr>
@@ -588,7 +593,7 @@
                         <td>/inviteinfo discord.gg/sound</td>
                     </tr>
                     <tr>
-                        <td>/server</td>
+                        <td>/serverinfo</td>
                         <td>Provides the information about the interaction server</td>
                         <td>/serverinfo</td>
                     </tr>
@@ -600,7 +605,7 @@
                     <tr>
                         <td>/whois</td>
                         <td>Provides a detailes information about a user like creation data, joined date, permissions, highest role, user id etc ...</td>
-                        <td>/terms-of-service</td>
+                        <td>/whois @Blob</td>
                     </tr>
                 </tbody>
             </table>

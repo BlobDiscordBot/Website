@@ -102,8 +102,8 @@ const commandsData = [
             { command: '/help', description: 'Shows all the commands available in me', example: '/help' },
             { command: '/invite', description: 'Provides you the invite link so that you can add me to your server 💖', example: '/invite' },
             { command: '/ping', description: 'Shows the bot\'s response time', example: '/ping' },
-            { command: '/privacy-policy', description: 'Shows our privacy policy; you can also find our privacy policy on our website', example: '/privacy-policy' },
-            { command: '/terms-of-service', description: 'Shows our terms of service; find our terms of service on our website too', example: '/terms-of-service' },
+            { command: '/privacy-policy', description: 'Shows our privacy policy', example: '/privacy-policy' },
+            { command: '/terms-of-service', description: 'Shows our terms of service', example: '/terms-of-service' },
             { command: '/support', description: 'Provides you a link towards our support server', example: '/support' },
         ]
     },
@@ -112,22 +112,20 @@ const commandsData = [
         commands: [
             { command: '/avatar', description: 'Shows yours or a user\'s avatar', example: '/avatar @Blob' },
             { command: '/inviteinfo', description: 'Provides the server info from an invite link', example: '/inviteinfo discord.gg/sound' },
-            { command: '/server', description: 'Provides information about the interaction server', example: '/serverinfo' },
+            { command: '/serverinfo', description: 'Provides information about the interaction server', example: '/serverinfo' },
             { command: '/systeminfo', description: 'Provides information about my system', example: '/privacy-policy' },
-            { command: '/whois', description: 'Provides detailed information about a user like creation date, joined date, permissions, highest role, user id, etc.', example: '/terms-of-service' },
+            { command: '/whois', description: 'Provides detailed information about a user like creation date, joined date, permissions, highest role, user id, etc.', example: '/whois @Blob' },
         ]
     },
 ];
 
-
-    // Function to search commands
 function searchCommands() {
     const searchInput = document.getElementById('commandSearch').value.trim().toLowerCase();
     const searchResults = document.getElementById('searchResults');
     searchResults.innerHTML = '';
 
     if (searchInput === '') {
-        return; // Do not display anything if the search bar is empty
+        return;
     }
 
     let resultFound = false;
@@ -137,7 +135,7 @@ function searchCommands() {
         if (matchingCommands.length > 0) {
             resultFound = true;
             const categorySection = document.createElement('section');
-            categorySection.id = category.category.replace(/\s+/g, '-').toLowerCase(); // Generate an ID based on category name
+            categorySection.id = category.category.replace(/\s+/g, '-').toLowerCase();
             categorySection.className = 'py-5';
             categorySection.style.backgroundColor = '#aaa2a2';
 
@@ -145,7 +143,7 @@ function searchCommands() {
             container.className = 'container';
 
             const categoryHeader = document.createElement('h2');
-            categoryHeader.className = 'text-center mb-4';
+            categoryHeader.className = 'text-left mb-4';
             categoryHeader.textContent = `${category.category} Commands`;
 
             const table = document.createElement('table');
@@ -192,9 +190,9 @@ function searchCommands() {
             container.appendChild(table);
             categorySection.appendChild(container);
 
-                searchResults.appendChild(categorySection);
-            }
-        });
+            searchResults.appendChild(categorySection);
+        }
+    });
 
     if (!resultFound) {
         const noResultSection = document.createElement('section');
@@ -202,7 +200,7 @@ function searchCommands() {
         noResultSection.style.backgroundColor = '#aaa2a2';
 
         const categoryHeader = document.createElement('h2');
-        categoryHeader.className = 'text-center mb-4';
+        categoryHeader.className = 'text-left mb-4';
         categoryHeader.textContent = `${category.category} Commands`;
         categoryHeader.style.color = 'black';
 
@@ -210,7 +208,7 @@ function searchCommands() {
         noResultContainer.className = 'container';
 
         const noResultHeader = document.createElement('h2');
-        noResultHeader.className = 'text-center mb-4';
+        noResultHeader.className = 'text-left mb-4';
         noResultHeader.textContent = 'No Result Found';
 
         noResultContainer.appendChild(noResultHeader);
