@@ -115,6 +115,7 @@ const commandsData = [
             { command: '/serverinfo', description: 'Provides information about the interaction server', example: '/serverinfo' },
             { command: '/systeminfo', description: 'Provides information about my system', example: '/privacy-policy' },
             { command: '/whois', description: 'Provides detailed information about a user like creation date, joined date, permissions, highest role, user id, etc.', example: '/whois @Blob' },
+            { command: '/mc-serverinfo', description: 'Provides information of a Minecraft server', example: '/mc-serverinfo hypixel' },
         ]
     },
 ];
